@@ -14,6 +14,37 @@ O CoinBank é um projeto desenvolvido como parte de um desafio prático para ava
 
 > Este projeto visa proporcionar uma experiência prática em desenvolvimento web, focando em boas práticas e segurança nas operações financeiras.
 
+
+### Comandos Artisan para Usuários
+
+Este projeto contém comandos Artisan que permitem listar, aprovar e negar registros de usuários diretamente pelo terminal, sem a necessidade de interface gráfica.
+
+![Status_register](status_exemplo.png)
+
+#### Comandos disponíveis
+
+* Listar usuários aguardando aprovação
+```
+php artisan users-awaiting
+```
+
+![Exemplo-saida](exemplo-out.png)
+
+* Aprovar usuário
+
+```
+php artisan users-approve {email}
+```
+> exemplo: php artisan users-approve joao@email.com
+
+* Negar usuário
+
+```
+php artisan users-denied {email}
+```
+> exemplo: php artisan users-denied maria@email.com
+
+
 ### Requisitos
 
 * PHP >= 8.4
