@@ -1,7 +1,7 @@
 # CoinBank
 O CoinBank é um projeto desenvolvido como parte de um desafio prático para avaliar habilidades técnicas em desenvolvimento com Laravel. O objetivo principal é criar um sistema de gerenciamento de contas bancárias que permita a administração de usuários, contas e transferências de forma segura e eficiente.
 
-![Logo](logo.png)
+![Logo](coinbank.png)
 
 ## Funcionalidades Principais
 
