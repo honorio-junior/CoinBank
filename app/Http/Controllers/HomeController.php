@@ -20,7 +20,12 @@ class HomeController extends Controller
 
     public function showView()
     {
-        return view('home', ['users' => User::all()]);
+        $account = Auth::user()->account;
+
+        // Paginação de 10 por página
+        $extracts = $account->extracts()->orderBy('created_at', 'desc')->paginate(5);
+
+        return view('home', compact('extracts'));
     }
 
     public function newAccount(): RedirectResponse

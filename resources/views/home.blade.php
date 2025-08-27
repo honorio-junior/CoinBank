@@ -86,7 +86,7 @@
             </tr>
         </thead>
         <tbody>
-            @forelse(Auth::user()->account->extracts as $extract)
+            @forelse($extracts as $extract)
             <tr>
                 <td>{{ $extract->origin }}</td>
                 <td>{{ $extract->destination }}</td>
@@ -101,6 +101,10 @@
             @endforelse
         </tbody>
     </table>
+
+    <div class="d-flex justify-content-center">
+        {{ $extracts->links('pagination::bootstrap-4') }}
+    </div>
 
 </div>
 
