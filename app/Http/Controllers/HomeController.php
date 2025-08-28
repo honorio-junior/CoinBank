@@ -22,8 +22,11 @@ class HomeController extends Controller
     {
         $account = Auth::user()->account;
 
-        // Paginação de 10 por página
-        $extracts = $account->extracts()->orderBy('created_at', 'desc')->paginate(5);
+        if ($account != null) {
+            $extracts = $account->extracts()->orderBy('created_at', 'desc')->paginate(5);
+        }else{
+            $extracts = [];
+        }
 
         return view('home', compact('extracts'));
     }
